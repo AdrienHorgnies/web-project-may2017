@@ -17,16 +17,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'wp works!'`, async(() => {
+  it(`should have as title 'Un enseignement de qualité!'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('wp works!');
+    expect(app.title).toEqual('Un enseignement de qualité!');
   }));
 
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('wp works!');
+    expect(compiled.querySelector('h1').textContent).toContain('Un enseignement de qualité!');
   }));
 });
