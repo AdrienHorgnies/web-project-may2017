@@ -13,6 +13,8 @@ import { PartnershipsComponent } from './partnerships/partnerships.component';
 import { QualityComponent } from './quality/quality.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
+import { ROUTES } from './app.route';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
