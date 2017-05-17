@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { InformationComponent } from './information/information.component';
@@ -13,11 +12,11 @@ import { NewsComponent } from './news/news.component';
 import { PartnershipsComponent } from './partnerships/partnerships.component';
 import { QualityComponent } from './quality/quality.component';
 import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     HomeComponent,
     FooterComponent,
     InformationComponent,
@@ -25,7 +24,8 @@ import { ContactComponent } from './contact/contact.component';
     NewsComponent,
     PartnershipsComponent,
     QualityComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
