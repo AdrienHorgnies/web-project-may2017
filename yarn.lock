@@ -4144,6 +4144,10 @@ requires-port@1.0.x, requires-port@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
+resets@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/resets/-/resets-1.0.9.tgz#edc82e270cbf5c3e09559e1fd2bbc5adcbaf0675"
+
 resolve@^1.1.6, resolve@^1.1.7:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
