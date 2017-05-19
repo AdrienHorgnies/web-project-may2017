@@ -1,3 +1,6 @@
 <p>
   news works!
 </p>
+<div *ngFor="let article of news | async | slice:0:3">
+  <div>{{article}}</div>
+</div>
