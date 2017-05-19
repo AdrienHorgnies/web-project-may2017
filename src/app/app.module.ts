@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { ROUTES } from './app.route';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NewsService } from './news/news.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    NewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
