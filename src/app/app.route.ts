@@ -9,6 +9,7 @@ import {NewsComponent} from './news/news.component';
 import {PartnershipsComponent} from './partnerships/partnerships.component';
 import {QualityComponent} from './quality/quality.component';
 import {ContactComponent} from './contact/contact.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 export const ROUTES: Routes =  [
   { path: '', component: HomeComponent},
@@ -24,5 +25,6 @@ export const ROUTES: Routes =  [
   { path: 'partnerships', component: PartnershipsComponent},
   { path: 'qualite', component: QualityComponent},
   { path: 'quality', component: QualityComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: '**', component: PageNotFoundComponent}
 ];
