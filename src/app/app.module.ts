@@ -21,6 +21,7 @@ import { CoursesService } from './courses/courses.service';
 import { RequestOptionsService } from './request-options.service';
 import { BackendService } from './backend.service';
 import { CourseCategoriesComponent } from './courses/course-categories/course-categories.component';
+import { ContactInformationComponent } from './contact/contact-information/contact-information.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CourseCategoriesComponent } from './courses/course-categories/course-ca
     ContactComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    CourseCategoriesComponent
+    CourseCategoriesComponent,
+    ContactInformationComponent
   ],
   imports: [
     BrowserModule,
