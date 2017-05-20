@@ -20,6 +20,7 @@ import { NewsService } from './news/news.service';
 import { CoursesService } from './courses/courses.service';
 import { RequestOptionsService } from './request-options.service';
 import { BackendService } from './backend.service';
+import { CourseCategoriesComponent } from './courses/course-categories/course-categories.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BackendService } from './backend.service';
     QualityComponent,
     ContactComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CourseCategoriesComponent
   ],
   imports: [
     BrowserModule,
