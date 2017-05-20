@@ -17,6 +17,7 @@ import { ROUTES } from './app.route';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewsService } from './news/news.service';
+import { CoursesService } from './courses/courses.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NewsService } from './news/news.service';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    NewsService
+    NewsService,
+    CoursesService
   ],
   bootstrap: [AppComponent]
 })
