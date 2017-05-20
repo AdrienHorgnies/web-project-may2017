@@ -9,6 +9,6 @@ export class BackendService {
   }
 
   get(url: string) {
-    return this.http.get(`${this.baseURL}url`);
+    return this.http.get(`${this.baseURL}${url}`);
   }
 }

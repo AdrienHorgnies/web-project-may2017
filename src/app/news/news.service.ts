@@ -12,7 +12,7 @@ export class NewsService {
   constructor(private http: BackendService) { }
 
   list() {
-    return this.http.get('http://127.0.0.1:8080/api/articles')
+    return this.http.get('articles')
       .map(res => res.json())
       .catch( (error) => {
         console.log(`NewsService cam across the following error : \n${error}`);
