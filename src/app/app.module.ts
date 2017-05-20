@@ -22,6 +22,7 @@ import { RequestOptionsService } from './request-options.service';
 import { BackendService } from './backend.service';
 import { CourseCategoriesComponent } from './courses/course-categories/course-categories.component';
 import { ContactInformationComponent } from './contact/contact-information/contact-information.component';
+import { OpeningHoursComponent } from './contact/opening-hours/opening-hours.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ContactInformationComponent } from './contact/contact-information/conta
     HeaderComponent,
     PageNotFoundComponent,
     CourseCategoriesComponent,
-    ContactInformationComponent
+    ContactInformationComponent,
+    OpeningHoursComponent
   ],
   imports: [
     BrowserModule,
