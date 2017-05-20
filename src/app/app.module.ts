@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, RequestOptions } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +18,8 @@ import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewsService } from './news/news.service';
 import { CoursesService } from './courses/courses.service';
+import { RequestOptionsService } from './request-options.service';
+import { BackendService } from './backend.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { CoursesService } from './courses/courses.service';
   ],
   providers: [
     NewsService,
-    CoursesService
+    CoursesService,
+    { provide: RequestOptions, useClass: RequestOptionsService },
+    BackendService
   ],
   bootstrap: [AppComponent]
 })
