@@ -1,21 +1,23 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-      </button>
-      <a class="navbar-brand" routerLink="/">IEPSCF NAMUR CADETS</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li *ngFor="let menuItem of menuItems" (click)="selectThisMenuItem(menuItem.route)" [class.active]="menuItem.route === this.selectedMenuItem">
-          <a routerLink="{{menuItem.route}}">{{menuItem.value}}</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/AdrienHorgnies/web-project-may2017"><i class="fa fa-github" aria-hidden="true"></i></a>
-        </li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container-fluid -->
-</nav>
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        </button>
+        <a class="navbar-brand" routerLink="/">IEPSCF NAMUR CADETS</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li *ngFor="let menuItem of menuItems" (click)="selectThisMenuItem(menuItem.route)" [class.active]="menuItem.route === this.selectedMenuItem">
+            <a routerLink="{{menuItem.route}}">{{menuItem.value}}</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/AdrienHorgnies/web-project-may2017"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+</div>
