@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BackendService {
@@ -9,6 +14,11 @@ export class BackendService {
   }
 
   get(url: string) {
-    return this.http.get(`${this.baseURL}${url}`);
+    return this.http.get(`${this.baseURL}${url}`)
+      .map(res => res.json())
+      .catch( (error) => {
+        console.log(`BackendService came across the following error : \n${error}`);
+        return  Observable.empty();
+      });
   }
 }
