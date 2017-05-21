@@ -5,6 +5,7 @@
   <h3 class="box_header">Liste des contacts</h3>
   <ul class="row">
     <li class="info col-sm-4" *ngFor="let contactPerson of contactPeople">
+      <!--That should be a component-->
       <img class="info" src="/assets/images/features_small/info.png">
       <h3>{{contactPerson.title}}</h3>
       <p *ngIf="contactPerson.name">{{contactPerson.name}}</p>

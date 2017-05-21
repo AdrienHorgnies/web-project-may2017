@@ -4,9 +4,12 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         </button>
-        <a class="navbar-brand" routerLink="/">IEPSCF NAMUR CADETS</a>
+        <a class="navbar-brand header_left" routerLink="/">
+          <img src="/assets/images/header_logo.png">
+          <span class="logo box_header">IEPSCF NAMUR CADETS</span>
+        </a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+      <div id="navbar header_right" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li *ngFor="let menuItem of menuItems" (click)="selectThisMenuItem(menuItem.route)" [class.active]="menuItem.route === this.selectedMenuItem">
             <a class="menuItem" routerLink="{{menuItem.route}}">{{menuItem.value.toUpperCase()}}</a>
