@@ -46,3 +46,26 @@ h3{
 .gray-border-bottom {
   border-bottom: 1px solid #E0E0E0;
 }
+
+.justify {
+  text-align: justify;
+}
+
+router-outlet p,
+router-outlet li {
+  color: #666;
+}
+
+.list li {
+  line-height: 150%;
+  background-position: left center;
+  padding: 5px 0 5px 18px;
+}
+.icon_small_arrow
+{
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon_small_arrow.right_black {
+  background-image: url("/assets/images/icon_arrow_right_black.png");
+}

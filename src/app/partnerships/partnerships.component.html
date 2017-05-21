@@ -1,3 +1,29 @@
-<p>
-  partnerships works!
-</p>
+<div class="row">
+  <h1 class="col-sm-12">Partenariats</h1>
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <h3 class="box_header">
+      Nos partenariats
+    </h3>
+
+    <p>
+      <em>Afin de continuer à promouvoir l’image de marque de notre éatablissement, il est primordial de veiller à l’ancrage de ce dernier dans le tissu socio-économique namurois via l’élaboration de conventions avec des partenaires externes,  via le recours d’experts du terrain dans certaines activités d’enseignement ou encore via les contacts  privilégiés que nous entretenons avec les gens de la profession lors des stages, des travaux de fin d’études ou des jurys d’ épreuves.</em><br><br>
+
+      Une des missions de notre enseignement est de répondre aux besoins et demandes en formation émanant des entreprises, des administrations, de l’enseignement et de manière générale des milieux socio-économiques et culturels. Notre Institut compte parmi ses partenaires :
+    </p>
+
+    <ul class="list">
+      <li class="icon_small_arrow right_black" *ngFor="let partnership of partnerships">{{partnership}}</li>
+    </ul>
+
+    <p>
+      Le contenu pédagogique de la formation, l'horaire et les droits d'inscription spécifiques sont définis dans une convention passée entre l'I.E.P.S.C.F. Namur Cadets et le partenaire. Les formations en convention sont sanctionnées par des attestations délivrées
+      par le Ministère de la Fédération Wallonie-Bruxelles.
+    </p>
+  </div>
+
+  <div class="col-sm-4">
+    <wp-contact-information></wp-contact-information>
+  </div>
+</div>

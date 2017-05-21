@@ -9,7 +9,7 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li *ngFor="let menuItem of menuItems" (click)="selectThisMenuItem(menuItem.route)" [class.active]="menuItem.route === this.selectedMenuItem">
-            <a routerLink="{{menuItem.route}}">{{menuItem.value}}</a>
+            <a class="menuItem" routerLink="{{menuItem.route}}">{{menuItem.value.toUpperCase()}}</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
