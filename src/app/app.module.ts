@@ -24,6 +24,7 @@ import { CourseCategoriesComponent } from './courses/course-categories/course-ca
 import { ContactInformationComponent } from './contact/contact-information/contact-information.component';
 import { OpeningHoursComponent } from './contact/opening-hours/opening-hours.component';
 import {ContactPersonService} from './contact/contact-person.service';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {ContactPersonService} from './contact/contact-person.service';
     PageNotFoundComponent,
     CourseCategoriesComponent,
     ContactInformationComponent,
-    OpeningHoursComponent
+    OpeningHoursComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

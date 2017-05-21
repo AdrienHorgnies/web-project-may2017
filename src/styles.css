@@ -69,3 +69,13 @@ router-outlet li {
 .icon_small_arrow.right_black {
   background-image: url("/assets/images/icon_arrow_right_black.png");
 }
+
+
+.sentence {
+  font-family: 'Volkhov';
+  color: #3156A3;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 25px;
+  line-height: 150%;
+}
