@@ -1,3 +1,16 @@
-<p>
-  contact works!
-</p>
+<div class="row">
+  <h1>Contact</h1>
+</div>
+<div class="row">
+  <h3 class="box_header">Liste des contacts</h3>
+  <ul class="row">
+    <li class="info col-sm-4" *ngFor="let contactPerson of contactPeople">
+      <img class="info" src="/assets/images/features_small/info.png">
+      <h3>{{contactPerson.title}}</h3>
+      <p *ngIf="contactPerson.name">{{contactPerson.name}}</p>
+      <p *ngIf="contactPerson.directPhoneNumber">Tél : {{contactPerson.directPhoneNumber}}</p>
+      <p *ngIf="contactPerson.fax">Fax : {{contactPerson.fax}}</p>
+      <p *ngIf="contactPerson.mail"><a href="mailto:{{contactPerson.mail}}">{{contactPerson.mail}}</a></p>
+    </li>
+  </ul>
+</div>

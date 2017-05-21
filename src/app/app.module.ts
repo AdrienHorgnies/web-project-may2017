@@ -23,6 +23,7 @@ import { BackendService } from './backend.service';
 import { CourseCategoriesComponent } from './courses/course-categories/course-categories.component';
 import { ContactInformationComponent } from './contact/contact-information/contact-information.component';
 import { OpeningHoursComponent } from './contact/opening-hours/opening-hours.component';
+import {ContactPersonService} from './contact/contact-person.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { OpeningHoursComponent } from './contact/opening-hours/opening-hours.com
     NewsService,
     CoursesService,
     { provide: RequestOptions, useClass: RequestOptionsService },
-    BackendService
+    BackendService,
+    ContactPersonService
   ],
   bootstrap: [AppComponent]
 })
