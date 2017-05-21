@@ -86,15 +86,22 @@
 
   </div>
   <div class="col-sm-4">
+    <h3 class="box_header">Galerie</h3>
+    <ul class="row galery">
+      <li class="col-sm-4" *ngFor="let picture of pictures">
+        <img src="{{picture}}" alt ="">
+      </li>
+    </ul>
+
     <wp-contact-information></wp-contact-information>
     <div class="row">
       <div class="col-sm-12 notification_box">
         <h2 class="notification_dir"> Règlement d'ordre intérieur </h2>
-        <a class="right_white" href="assets/documents/roi2017.pdf">Télécharger</a>
+        <a class="right_white" href="assets/documents/roi2017.pdf" target="_blank">Télécharger</a>
         <h2 class="notification_dir"> Charte de qualité </h2>
-        <a class="right_white" href="assets/documents/charte.pdf">Télécharger</a>
+        <a class="right_white" href="assets/documents/charte.pdf" target="_blank">Télécharger</a>
         <h2 class="notification_dir"> Formulaire d'évaluation des <abbr title="unités d'enseignement">UE</abbr></h2>
-        <a class="right_white" href="assets/documents/eval_enseignements.pdf">Télécharger</a>
+        <a class="right_white" href="assets/documents/eval_enseignements.pdf" target="_blank">Télécharger</a>
       </div>
     </div>
   </div>
