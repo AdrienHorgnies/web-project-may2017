@@ -3,7 +3,7 @@ import { ContactPersonModel } from '../contact-person-model';
 import { SendContactFormService } from './send-contact-form.service';
 
 export class ContactForm {
-  recipient: ContactPersonModel;
+  recipient: number;
   name: string;
   firstname: string;
   phone: string;
@@ -24,6 +24,9 @@ export class ContactFormComponent implements OnInit {
   constructor(private sendContactFormService: SendContactFormService) { }
 
   ngOnInit() {
+    console.log('creation');
+    console.log(`creation : ${this.cf}`);
+    console.log(this.cf);
     this.cf.name = 'ThisIsAName';
     this.cf.firstname = 'ThisIsAFirstname';
     this.cf.phone = '066666666';
@@ -33,6 +36,10 @@ export class ContactFormComponent implements OnInit {
 
   register() {
     this.cf.date = new Date();
+    console.log('FORMULAIRE DE CONTACT');
+    console.log(this.cf);
+    console.log('DESTINATAIRE');
+    console.log(this.cf.recipient);
     this.sendContactFormService.sendForm(this.cf);
   }
 }

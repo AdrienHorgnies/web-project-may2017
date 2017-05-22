@@ -24,12 +24,14 @@ export class BackendService {
 
   post(url: string, body: any) {
     console.log(body);
-    console.log(`serialized data : ${JSON.stringify(body)}`);
-    return this.http.post(`${this.baseURL}${url}`, JSON.stringify(body))
+    return this.http.post(`${this.baseURL}${url}`, body)
       .map(res => res.json())
       .subscribe(
-        response => console.log(response),
-        error => console.log(`BackendService came across the following error : \n${error}`)
+        response => {
+          console.log('BackEndService SUCCESS:');
+          console.log(response);
+        },
+        error => console.log(`BackendService came across the following ERROR : \n${error}`)
       );
   }
 }
