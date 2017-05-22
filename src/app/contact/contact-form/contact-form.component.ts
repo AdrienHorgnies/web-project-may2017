@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { ContactPersonModel } from '../contact-person-model';
 
 class ContactForm {
   name: string;
@@ -15,6 +16,7 @@ class ContactForm {
 })
 export class ContactFormComponent implements OnInit {
   cf = new ContactForm();
+  @Input() contactPeople: Array<ContactPersonModel>;
 
   constructor() { }
 
@@ -24,5 +26,6 @@ export class ContactFormComponent implements OnInit {
 
   register() {
     console.log(this.cf);
+    console.log(this.contactPeople);
   }
 }
