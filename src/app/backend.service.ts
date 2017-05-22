@@ -23,7 +23,6 @@ export class BackendService {
   }
 
   post(url: string, body: any) {
-    console.log(body);
     return this.http.post(`${this.baseURL}${url}`, body)
       .map(res => res.json())
       .subscribe(
