@@ -2,10 +2,34 @@
   Nous contacter
 </h3>
 <form (ngSubmit)="register()" #contactForm="ngForm">
-  <div><label>Nom</label><input name="name" [(ngModel)]="cf.name" required minlength="5"></div>
-  <div><label>Prénom</label><input name="firstname" [(ngModel)]="cf.firstname" required minlength="5"></div>
-  <div><label>Téléphone</label><input name="phone" [(ngModel)]="cf.phone" required minlength="8"></div>
-  <div><label>E-mail</label><input name="mail" [(ngModel)]="cf.mail" required email></div>
-  <div><label>Message</label><input name="message" [(ngModel)]="cf.message" required minlength="16"></div>
+  <div>
+    <label>Nom</label>
+    <input name="name" [(ngModel)]="cf.name" required minlength="5" #name="ngModel">
+    </div>
+  <div>
+    <label>Prénom</label>
+    <input name="firstname" [(ngModel)]="cf.firstname" required minlength="5" #firstname="ngModel">
+  </div>
+  <div>
+    <label>Téléphone</label>
+    <input name="phone" [(ngModel)]="cf.phone" required minlength="8" #phone="ngModel">
+  </div>
+  <div>
+    <label>E-mail</label>
+    <input name="mail" [(ngModel)]="cf.mail" required email #mail="ngModel">
+  </div>
+  <div>
+    <label>Message</label>
+    <input name="message" [(ngModel)]="cf.message" required minlength="16" #message="ngModel">
+  </div>
   <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+  <div *ngIf="name.dirty && name.hasError('required')">Le nom est requis</div>
+  <div *ngIf="name.dirty && name.hasError('minlength')">Le nom doit faire au moins 5 charactères</div>
+  <div *ngIf="firstname.dirty && firstname.hasError('required')">Le prénom est requis</div>
+  <div *ngIf="firstname.dirty && firstname.hasError('minlength')">Le prénom doit faire au moins 5 charactères</div>
+  <div *ngIf="phone.dirty && phone.hasError('required')">Le téléphone est requis</div>
+  <div *ngIf="mail.dirty && mail.hasError('required')">L'email est requis</div>
+  <div *ngIf="mail.dirty && mail.hasError('email')">L'email n'est pas valide</div>
+  <div *ngIf="message.dirty && message.hasError('required')">Le message est requis</div>
+  <div *ngIf="message.dirty && message.hasError('minlength')">Le message doit faire au moins 16 charactères</div>
 </form>
