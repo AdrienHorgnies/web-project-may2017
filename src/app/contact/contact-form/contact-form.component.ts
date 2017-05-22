@@ -9,6 +9,7 @@ export class ContactForm {
   phone: string;
   mail: string;
   message: string;
+  date: Date;
 }
 
 @Component({
@@ -16,12 +17,6 @@ export class ContactForm {
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
-@NgModule({
-    providers: [
-      SendContactFormService
-    ]
-}
-)
 export class ContactFormComponent implements OnInit {
   cf = new ContactForm();
   @Input() contactPeople: Array<ContactPersonModel>;
@@ -33,7 +28,9 @@ export class ContactFormComponent implements OnInit {
   }
 
   register() {
+    this.cf.date = new Date();
     console.log(this.cf);
+
     this.sendContactFormService.sendForm(this.cf);
   }
 }

@@ -25,6 +25,7 @@ import { ContactInformationComponent } from './contact/contact-information/conta
 import { OpeningHoursComponent } from './contact/opening-hours/opening-hours.component';
 import {ContactPersonService} from './contact/contact-person.service';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import {SendContactFormService} from './contact/contact-form/send-contact-form.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
     CoursesService,
     { provide: RequestOptions, useClass: RequestOptionsService },
     BackendService,
-    ContactPersonService
+    ContactPersonService,
+    SendContactFormService
   ],
   bootstrap: [AppComponent]
 })
