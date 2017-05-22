@@ -24,7 +24,9 @@ export class BackendService {
 
   post(url: string, body: any) {
     console.log(body);
-    return this.http.post(`${this.baseURL}${url}`, body)
+    console.log(`serialized data : ${JSON.stringify(body)}`);
+    return this.http.post(`${this.baseURL}${url}`, JSON.stringify(body))
+      .map(res => res.json())
       .subscribe(
         response => console.log(response),
         error => console.log(`BackendService came across the following error : \n${error}`)

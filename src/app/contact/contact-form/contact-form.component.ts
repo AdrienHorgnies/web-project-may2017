@@ -24,13 +24,15 @@ export class ContactFormComponent implements OnInit {
   constructor(private sendContactFormService: SendContactFormService) { }
 
   ngOnInit() {
-    this.cf.name = 'Horgnies';
+    this.cf.name = 'ThisIsAName';
+    this.cf.firstname = 'ThisIsAFirstname';
+    this.cf.phone = '066666666';
+    this.cf.mail = 'this.is.an.email@gmail.com';
+    this.cf.message = 'So, I wanted to speak about that thing.';
   }
 
   register() {
     this.cf.date = new Date();
-    console.log(this.cf);
-
     this.sendContactFormService.sendForm(this.cf);
   }
 }

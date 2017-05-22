@@ -8,6 +8,9 @@ export class SendContactFormService {
   constructor(private http: BackendService) { }
 
   sendForm(form: ContactForm) {
+    this.http.post('course-categories', {
+      'name': 'ornithologie'
+    });
     return this.http.post('inmails', form);
   }
 }

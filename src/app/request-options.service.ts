@@ -9,6 +9,7 @@ export class RequestOptionsService extends BaseRequestOptions  {
   constructor() {
     super();
     this.headers.set('Accept', 'application/json');
+    this.headers.set('Content-Type', 'application/json');
     this.headers.set('Authorization', `Bearer ${this.token}`);
   }
 }
