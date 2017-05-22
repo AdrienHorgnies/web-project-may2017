@@ -1,9 +1,9 @@
 import {Component, Input, NgModule, OnInit} from '@angular/core';
 import { ContactPersonModel } from '../contact-person-model';
-import {SendContactFormService} from './send-contact-form.service';
+import { SendContactFormService } from './send-contact-form.service';
 
 export class ContactForm {
-  recipient: number;
+  recipient: ContactPersonModel;
   name: string;
   firstname: string;
   phone: string;
