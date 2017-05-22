@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, NgModule, OnInit} from '@angular/core';
 import { ContactPersonModel } from '../contact-person-model';
+import {SendContactFormService} from './send-contact-form.service';
 
-class ContactForm {
+export class ContactForm {
   recipient: number;
   name: string;
   firstname: string;
@@ -15,11 +16,17 @@ class ContactForm {
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
+@NgModule({
+    providers: [
+      SendContactFormService
+    ]
+}
+)
 export class ContactFormComponent implements OnInit {
   cf = new ContactForm();
   @Input() contactPeople: Array<ContactPersonModel>;
 
-  constructor() { }
+  constructor(private sendContactFormService: SendContactFormService) { }
 
   ngOnInit() {
     this.cf.name = 'Horgnies';
@@ -27,5 +34,6 @@ export class ContactFormComponent implements OnInit {
 
   register() {
     console.log(this.cf);
+    this.sendContactFormService.sendForm(this.cf);
   }
 }

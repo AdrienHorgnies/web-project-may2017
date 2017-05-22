@@ -21,4 +21,8 @@ export class BackendService {
         return  Observable.empty();
       });
   }
+
+  post(url: string, body: any) {
+    this.http.post(`${this.baseURL}${url}`, body.stringify());
+  }
 }
