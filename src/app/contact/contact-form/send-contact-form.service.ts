@@ -8,6 +8,6 @@ export class SendContactFormService {
   constructor(private http: BackendService) { }
 
   sendForm(form: ContactForm) {
-    this.http.post('inmails', form);
+    return this.http.post('inmails', form);
   }
 }

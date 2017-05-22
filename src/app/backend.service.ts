@@ -23,7 +23,7 @@ export class BackendService {
   }
 
   post(url: string, body: any) {
-    this.http.post(`${this.baseURL}${url}`, body)
+    return this.http.post(`${this.baseURL}${url}`, body)
       .catch( (error) => {
         console.log(`BackendService came across the following error : \n${error}`);
         return  Observable.empty();
