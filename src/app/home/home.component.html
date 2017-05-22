@@ -18,7 +18,15 @@
 <div class="row">
   <div class="col-sm-8">
     <div class="row">
-      <h3 class="box_header">Nos actualités</h3>
+      <div class="col-sm-12">
+        <h3 class="box_header">Nos actualités</h3>
+        <div *ngFor="let article of news | slice:0:3">
+          <img *ngIf="article.illustration" src="{{article.illustration}}">
+          <h2>{{article.title}}</h2>
+          <span>{{article.date}}</span>
+          <p [innerHTML]="article.content"></p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-sm-4">
