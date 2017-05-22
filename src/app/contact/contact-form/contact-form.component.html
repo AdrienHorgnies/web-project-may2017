@@ -1,11 +1,11 @@
 <h3 class="box_header">
   Nous contacter
 </h3>
-<form (ngSubmit)="register()">
-  <div><label>Nom</label><input name="name" [(ngModel)]="contactForm.name"></div>
-  <div><label>Prénom</label><input name="firstname" [(ngModel)]="contactForm.firstname"></div>
-  <div><label>Téléphone</label><input name="phone" [(ngModel)]="contactForm.phone"></div>
-  <div><label>E-mail</label><input name="mail" [(ngModel)]="contactForm.mail"></div>
-  <div><label>Message</label><input name="message" [(ngModel)]="contactForm.message"></div>
-  <button type="submit">Envoyer</button>
+<form (ngSubmit)="register()" #contactForm="ngForm">
+  <div><label>Nom</label><input name="name" [(ngModel)]="cf.name" required minlength="5"></div>
+  <div><label>Prénom</label><input name="firstname" [(ngModel)]="cf.firstname" required minlength="5"></div>
+  <div><label>Téléphone</label><input name="phone" [(ngModel)]="cf.phone" required minlength="8"></div>
+  <div><label>E-mail</label><input name="mail" [(ngModel)]="cf.mail" required email></div>
+  <div><label>Message</label><input name="message" [(ngModel)]="cf.message" required minlength="16"></div>
+  <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
 </form>

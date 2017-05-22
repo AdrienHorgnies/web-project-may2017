@@ -14,15 +14,15 @@ class ContactForm {
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent implements OnInit {
-  contactForm = new ContactForm();
+  cf = new ContactForm();
 
   constructor() { }
 
   ngOnInit() {
-    this.contactForm.name = 'Horgnies';
+    this.cf.name = 'Horgnies';
   }
 
   register() {
-    console.log(this.contactForm);
+    console.log(this.cf);
   }
 }
