@@ -2,27 +2,73 @@
   Nous contacter
 </h3>
 <form (ngSubmit)="register()" #contactForm="ngForm">
-  <div>
-    <label>Nom</label>
-    <input name="name" [(ngModel)]="cf.name" required minlength="5" #name="ngModel">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Nom</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input name="name" [(ngModel)]="cf.name" required minlength="5" #name="ngModel">
+        </div>
+      </div>
     </div>
-  <div>
-    <label>Prénom</label>
-    <input name="firstname" [(ngModel)]="cf.firstname" required minlength="5" #firstname="ngModel">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Prénom</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input name="firstname" [(ngModel)]="cf.firstname" required minlength="5" #firstname="ngModel">
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>Téléphone</label>
-    <input name="phone" [(ngModel)]="cf.phone" required minlength="8" #phone="ngModel">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Téléphone</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input name="phone" [(ngModel)]="cf.phone" required minlength="8" #phone="ngModel">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
+          <label>E-mail</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input name="mail" [(ngModel)]="cf.mail" required email #mail="ngModel">
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>E-mail</label>
-    <input name="mail" [(ngModel)]="cf.mail" required email #mail="ngModel">
+  <div class="row">
+    <div class="col-sm-12">
+      <label>Message</label>
+    </div>
   </div>
-  <div>
-    <label>Message</label>
-    <input name="message" [(ngModel)]="cf.message" required minlength="16" #message="ngModel">
+  <div class="row">
+    <div class="col-sm-12">
+      <textarea name="message" [(ngModel)]="cf.message" required minlength="16" #message="ngModel"></textarea>
+    </div>
   </div>
-  <button type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+  <div class="row">
+    <div class="col-sm-12">
+      <button class="button" type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+    </div>
+  </div>
   <div *ngIf="name.dirty && name.hasError('required')">Le nom est requis</div>
   <div *ngIf="name.dirty && name.hasError('minlength')">Le nom doit faire au moins 5 charactères</div>
   <div *ngIf="firstname.dirty && firstname.hasError('required')">Le prénom est requis</div>
