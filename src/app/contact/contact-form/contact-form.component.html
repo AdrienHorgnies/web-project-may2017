@@ -3,6 +3,13 @@
 </h3>
 <form (ngSubmit)="register()" #contactForm="ngForm">
   <div class="row">
+    <div class="col-sm-7">
+      <select name="recipient" class="button selectpicker" required [(ngModel)]="cf.recipient" #recipient="ngModel">
+        <option *ngFor="let person of contactPeople" [value]="person">{{person.title}}<span *ngIf="person.name"> - {{person.name}}</span></option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-6">
       <div class="row">
         <div class="col-sm-12">
@@ -11,7 +18,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <input name="name" [(ngModel)]="cf.name" required minlength="5" #name="ngModel">
+          <input name="name" required minlength="5" [(ngModel)]="cf.name" #name="ngModel">
         </div>
       </div>
     </div>
@@ -23,7 +30,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <input name="firstname" [(ngModel)]="cf.firstname" required minlength="5" #firstname="ngModel">
+          <input name="firstname" required minlength="5" [(ngModel)]="cf.firstname" #firstname="ngModel">
         </div>
       </div>
     </div>
@@ -69,13 +76,16 @@
       <button class="button" type="submit" [disabled]="contactForm.invalid">Envoyer</button>
     </div>
   </div>
-  <div *ngIf="name.dirty && name.hasError('required')">Le nom est requis</div>
-  <div *ngIf="name.dirty && name.hasError('minlength')">Le nom doit faire au moins 5 charactères</div>
-  <div *ngIf="firstname.dirty && firstname.hasError('required')">Le prénom est requis</div>
-  <div *ngIf="firstname.dirty && firstname.hasError('minlength')">Le prénom doit faire au moins 5 charactères</div>
-  <div *ngIf="phone.dirty && phone.hasError('required')">Le téléphone est requis</div>
-  <div *ngIf="mail.dirty && mail.hasError('required')">L'email est requis</div>
-  <div *ngIf="mail.dirty && mail.hasError('email')">L'email n'est pas valide</div>
-  <div *ngIf="message.dirty && message.hasError('required')">Le message est requis</div>
-  <div *ngIf="message.dirty && message.hasError('minlength')">Le message doit faire au moins 16 charactères</div>
+  <div class="row alert">
+    <div *ngIf="recipient.dirty && recipient.hasError('required')">Le destinataire est requis</div>
+    <div *ngIf="name.dirty && name.hasError('required')">Le nom est requis</div>
+    <div *ngIf="name.dirty && name.hasError('minlength')">Le nom doit faire au moins 5 charactères</div>
+    <div *ngIf="firstname.dirty && firstname.hasError('required')">Le prénom est requis</div>
+    <div *ngIf="firstname.dirty && firstname.hasError('minlength')">Le prénom doit faire au moins 5 charactères</div>
+    <div *ngIf="phone.dirty && phone.hasError('required')">Le téléphone est requis</div>
+    <div *ngIf="mail.dirty && mail.hasError('required')">L'email est requis</div>
+    <div *ngIf="mail.dirty && mail.hasError('email')">L'email n'est pas valide</div>
+    <div *ngIf="message.dirty && message.hasError('required')">Le message est requis</div>
+    <div *ngIf="message.dirty && message.hasError('minlength')">Le message doit faire au moins 16 charactères</div>
+  </div>
 </form>

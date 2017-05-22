@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { ContactPersonModel } from '../contact-person-model';
 
 class ContactForm {
+  recipient: ContactPersonModel;
   name: string;
   firstname: string;
   phone: string;
