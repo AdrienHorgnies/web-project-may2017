@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { ContactPersonModel } from '../contact-person-model';
 
 class ContactForm {
-  recipient: ContactPersonModel;
+  recipient: number;
   name: string;
   firstname: string;
   phone: string;
@@ -27,6 +27,5 @@ export class ContactFormComponent implements OnInit {
 
   register() {
     console.log(this.cf);
-    console.log(this.contactPeople);
   }
 }

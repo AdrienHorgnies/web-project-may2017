@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-sm-7">
       <select name="recipient" class="button selectpicker" required [(ngModel)]="cf.recipient" #recipient="ngModel">
-        <option *ngFor="let person of contactPeople" [value]="person">{{person.title}}<span *ngIf="person.name"> - {{person.name}}</span></option>
+        <option *ngFor="let person of contactPeople" [value]="person.id">{{person.title}}<span *ngIf="person.name"> - {{person.name}}</span></option>
       </select>
     </div>
   </div>
